@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Livewire\Products\Index as ProductsIndex;
 use App\Livewire\Products\Create as ProductsCreate;
 use App\Livewire\Products\Show as ProductsShow;
@@ -16,7 +17,7 @@ Route::get('/register', UsersRegister::class)->name('register');
 
 Route::middleware('auth')->group(function () {
     Route::any('/logout', function () {
-        auth()->logout();
+        Auth::logout();
         return redirect()->route('login')->with('success', 'Logout successful.');
     })->name('logout');
     Route::get('/', ProductsIndex::class)->name('livewire.index');
