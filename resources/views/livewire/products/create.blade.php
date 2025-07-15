@@ -78,9 +78,11 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="mb-3 row">
-                            <input type="submit" class="col-md-3 offsetmd-5 btn btn-primary" value="Add Product">
-                        </div>
+                   <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+    <button type="submit" class="btn btn-primary px-4 py-2 rounded-pill">
+        <i class="bi bi-plus-circle me-2"></i>Add Product
+    </button>
+</div>
                     </form>
                 </div>
             </div>
